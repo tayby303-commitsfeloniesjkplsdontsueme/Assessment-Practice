@@ -3,7 +3,7 @@ wrd=word.lower
 def honi(wrd):
     letters=["h","o","n","i"] #letters in honi
     current=0 #tracks current index in letters
-    search=letters[current] #
+    search=letters[current] #sets the letter in letters[] that is searched
     count=0
     for i in wrd:
         if wrd[i]==search:
@@ -14,4 +14,6 @@ def honi(wrd):
             break
     if count==1:
         print("That is a honi")
-print(honi(wrd))
+    elif count==0:
+        print("That is not a honi")
+honi(wrd)
