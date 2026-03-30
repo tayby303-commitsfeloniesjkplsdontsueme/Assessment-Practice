@@ -2,8 +2,8 @@ trees=int(input("How many trees are there? "))
 heights=[1,3,4,2]
 up=[]
 down=[]
-x=0
-y=0
+x=1
+y=1
 for i in heights(trees):
     if heights[i]<heights[i+1]:
         down.append(y)
