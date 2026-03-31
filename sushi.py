@@ -13,10 +13,14 @@ sushi_orders = [
 def receipt(orders):
     the_receipt={}
     for item in orders:
-        if sushi["name"] in the_receipt:
-            continue
+        if item["name"] in the_receipt:
+            the_receipt[item['name']]['qty']+=1
         else:
             the_receipt[item['name']]={
-                'price:susho'
+                'price':item['price'],
+                'qty':1
             }
+    for item, value in the_receipt.items():
+        price=value['price']*value['qty']
+        print(item, value['qty'],price)
 receipt(sushi_orders)
